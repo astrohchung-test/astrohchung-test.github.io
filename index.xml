@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Haeun Chung</title><link>https://astrohchung-test.netlify.app/</link><atom:link href="https://astrohchung-test.netlify.app/index.xml" rel="self" type="application/rss+xml"/><description>Haeun Chung</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Haeun Chung</copyright><lastBuildDate>Sat, 02 May 2020 00:00:00 +0100</lastBuildDate><image><url>https://astrohchung-test.netlify.app/images/icon_hu05798da5833095988f190093553a38f3_1610_512x512_fill_lanczos_center_2.png</url><title>Haeun Chung</title><link>https://astrohchung-test.netlify.app/</link></image><item><title>Curriculum Vitae</title><link>https://astrohchung-test.netlify.app/post/cv/</link><pubDate>Sat, 02 May 2020 00:00:00 +0100</pubDate><guid>https://astrohchung-test.netlify.app/post/cv/</guid><description>&lt;p>
+&lt;a href="https://drive.google.com/open?id=1RwfpIjh4cUfii2a_7RpaThErbEYjNn-Q" target="_blank" rel="noopener">Download my CV (in pdf)&lt;/a>&lt;/p></description></item><item><title>Devasthal Optical Telescope Integral Field Spectrograph (DOTIFS)</title><link>https://astrohchung-test.netlify.app/project/dotifs/</link><pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate><guid>https://astrohchung-test.netlify.app/project/dotifs/</guid><description>&lt;p>Devasthal Optical Telescope Integral Field Spectrograph (DOTIFS), (
+&lt;a href="http://adsabs.harvard.edu/abs/2014SPIE.9147E..0VC" target="_blank" rel="noopener">&lt;span style="color:blue">Chung et al. 2014&lt;/span>&lt;/a>) is a new &lt;strong>multi-Integral Field Unit (multi-IFU)&lt;/strong> instrument planned to be mounted on the 3.6m Devasthal optical telescope (
+&lt;a href="http://adsabs.harvard.edu/abs/2012SPIE.8444E..1TS" target="_blank" rel="noopener">&lt;span style="color:blue">Sagar et al. 2012&lt;/span>&lt;/a>)(
+&lt;a href="https://www.aries.res.in/dot/index.html" target="_blank" rel="noopener">link 1&lt;/a>,
+&lt;a href="https://www.aries.res.in/projects/" target="_blank" rel="noopener">link 2&lt;/a>) in Nainital, India. DOTIFS has &lt;strong>16 deployable IFUs&lt;/strong> covering an &lt;strong>8 arcminute&lt;/strong> diameter field of view. Each IFU covers &lt;strong>8.7 arcsec x 7.4 arcsec&lt;/strong> on the sky, and is composed of a 12 x 12 array of hexagonal shape microlenses each of which is &lt;strong>0.8 arcsec&lt;/strong> vertex to vertex. Use of microlens array allows ~99% fill factor. Optical fibers are attached at the back side of each microlens to gather and transfer light to the spectrographs. The fibers form a pseudoslit at the entrance of spectrograph. Dispersion is achieved using fixed Volume Phase Holographic (VPH) grating. Wavelength coverage is &lt;strong>370-740nm&lt;/strong>, and the spectral resolution is &lt;strong>1200 – 2400&lt;/strong> over the wavelength range. DOTIFS have eight identical spectrographs to cover 2,304 fibers, with 288 fibers (from two IFUs) per spectrograph.&lt;/p>
+&lt;p>The
+&lt;a href="https://instru.iucaa.in/" target="_blank" rel="noopener">instrumentation group&lt;/a> at the Inter-University Center for Astronomy and Astrophysics (Pune, India) is leading this project. Aryabhatta Research Institute of Observational Sciences (Nainital, India) is operating the Devasthal telescope, and Korea Institute for Advanced Study and Seoul National University (Seoul, Korea) are participating as international collaborators. The scientific goals are focused on nearby galaxies, which are the primary targets of the instrument. This includes rotation curves of nearby galaxies, galactic HII regions, and merging/interacting galaxies.&lt;/p>
+&lt;p>We are developing the instrument with 4 IFUs and 2 spectrographs in the first stage. After the initial commissioning on the telescope, we will add 12 IFUs and 6 spectrographs to complete the instrument in the second stage. Currently, DOTIFS is in the assembly, integration and testing phase of its first stage. We expect to commission the instrument in the middle of 2019.&lt;/p>
+&lt;hr>
+&lt;p>I joined this project when I entered the graduate school in Fall 2012, when there was only one science requirement document about this project. Since then I learned about astronomical instrumentation both the general picture of the development and the specific details. As a member of DOTIFS team, I mainly contributed to the overall conceptual design, optical design, and software development. I describe details of my contribution as below.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Overall conceptual design&lt;br>
+I have performed &lt;strong>a conceptual design study&lt;/strong> of the instrument in the early stage of the project. I proposed feasible design which fulfills all the demands from science requirements.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Optical design&lt;br>
+I have designed &lt;strong>the optical systems&lt;/strong> in the instrument (Spectrograph collimator and camera, fore-optics, and calibration optics). I am using &lt;strong>ZEMAX&lt;/strong> to optimize the optical layouts from an existing design or scratch to meet the requirements. I performed &lt;strong>tolerance analysis&lt;/strong> and &lt;strong>thermal analysis&lt;/strong> with ZEMAX and suggested a solution to mitigate the impact of temperature variation to the optical performance.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Software&lt;br>
+I have developed a &lt;strong>spectrograph CCD image simulator&lt;/strong> (in C/C++ and IDL) and an &lt;strong>exposure time calculator (ETC)&lt;/strong> (in IDL and Python3). The spectrograph CCD image simulator utilizes information of varying PSF shape on the image plane from ZEMAX, and throughput of intermediate components between a target and CCD. It generates simulated CCD image in the unit of the electron. Currently, I am developing a &lt;strong>data reduction pipeline&lt;/strong> (in Python3) using the output of the CCD image simulator. The exposure time calculator calculates expected S/N ratio of the spectrum from a given target.
+&lt;a href="https://github.com/astrohchung/dotifsetc" target="_blank" rel="noopener">Command line version DOTIFS ETC in Python3&lt;/a> is available through Github. The web version of DOTIFS ETC will be developed shortly using a Python web framework such as
+&lt;a href="http://flask.pocoo.org/" target="_blank" rel="noopener">flask&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>In addition to the above contributions, I am &lt;strong>organizing the regular development telecon&lt;/strong> and circulating the minutes weekly. During a telecon, each member updates the current progress of the development on every subpart of the instrument, and discuss issues and suggest a solution. I also &lt;strong>have performed various laboratory testing on parts&lt;/strong>, and &lt;strong>produced necessary documents&lt;/strong> for the project. I will visit IUCAA this year (2018) and be involved in an instrument assembly, integration and test.&lt;/p>
+&lt;hr>
+&lt;p>List of DOTIFS publications (6 conference proceedings, 1 refereed journal)&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>
+&lt;a href="https://doi.org/10.1117/1.JATIS.4.3.036002" target="_blank" rel="noopener">Noise characterization of IUCAA digital sampling array controller,&lt;/a>&lt;br>
+Chattopadhyay, S., Ramaprakash, A. N., Joshi, B., Chordia, P. A., Burse, M. P., Chillal, K., Sinha, S., Punnadi, S. P., Rikame, K., Hong, S. E., Paranjpye, D., &lt;strong>Chung, H.,&lt;/strong> Park. C., Omar, A., 2018, JATIS, 4, 036002&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://doi.org/10.1117/12.2313798" target="_blank" rel="noopener">Multiple rooks of chess: a generic integral field unit deployment technique,&lt;/a>&lt;br>
+Chattopadhyay, S., Ramaprakash, A. N., Khodade, P., Chakravarti, K., Shaikh, S., &lt;strong>Chung, H.,&lt;/strong> Hong, S. E., 2018, Proc. SPIE, 10706, 107065S&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://doi.org/10.1117/12.2313729" target="_blank" rel="noopener">A new photolithography based technique to mass produce microlens+fibre based integral field units (IFUs) for 2D spectroscopy,&lt;/a>&lt;br>
+Chattopadhyay, S., Joshi, V., Ramaprakash, A. N., Modi, D., Kohak, A., &lt;strong>Chung, H.,&lt;/strong> 2018, Proc. SPIE, 10706, 107062D&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://arxiv.org/abs/1810.03627" target="_blank" rel="noopener">DOTIFS: fore-optics and calibration unit design,&lt;/a>&lt;br>
+&lt;strong>Chung, H.,&lt;/strong> Ramaprakash, A. N., Khodade, P., Rajarshi, C. V., Chattopadhyay, S., Chordia, P. A., Omar, A., Park, C., 2018 Proc. SPIE, 10702, 107027U
+&lt;a href="https://astrohchung-test.netlify.app/files/DOTIFS_fcal.pdf">(see poster)&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://arxiv.org/abs/1810.03621" target="_blank" rel="noopener">DOTIFS: spectrograph optical and opto-mechanical design,&lt;/a>&lt;br>
+&lt;strong>Chung, H.,&lt;/strong> Ramaprakash, A. N., Khodade, P., Modi, D., Rajarshi, C. V., Chattopadhyay, S., Chordia, P. A., Joshi, V., Hong, S. E., Omar. A., Ravindranath. S., Park, Y. S., Park, C., 2018 Proc. SPIE, 10702, 107027A
+&lt;a href="https://astrohchung-test.netlify.app/files/DOTIFS_spec.pdf">(see poster)&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://doi.org/10.5303/PKAS.2015.30.2.675" target="_blank" rel="noopener">Development Status of the Dotifs Data Simulator and the Reduction Package,&lt;/a>&lt;br>
+&lt;strong>Chung, H.,&lt;/strong> Ramaprakash, A. N., Park, C. 2015, PKAS, 30, 675&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://arxiv.org/abs/1810.03614" target="_blank" rel="noopener">DOTIFS: a new multi-IFU optical spectrograph for the 3.6-m Devasthal optical telescope,&lt;/a>&lt;br>
+&lt;strong>Chung, H.,&lt;/strong> Ramaprakash, A. N., Omar, A., Ravindranath, S., Chattopadhyay, S., Rajarshi, C. V., Khodade, P. 2014 Proc. SPIE, 9147, 91470V&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;figure id="figure-left-outside-view-of-the-36m-devasthal-optical-telescope-right-inside-view-of-the-telescope">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_telescope.png" data-caption="(left) Outside view of the 3.6m Devasthal Optical Telescope. (right) Inside view of the telescope.">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_telescope.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+(left) Outside view of the 3.6m Devasthal Optical Telescope. (right) Inside view of the telescope.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-top-spectrograph-optics-layout-it-is-composed-of-16-spherical-singlets-with-five-closely-separated-pairs-with-seven-calcium-fluoride-components-bottom-left-fore-optics-layout-left-side-is-from-the-telescope-tertiary-fold-mirror-the-fore-optics-converts-plate-scale-of-the-light-from-1-arcsec157micron-to-08-arcsec300micron-from-f9-to-f21486-bottom-right-calibration-optics-layout-the-calibration-optics-shares-the-last-two-lenses-with-the-fore-optics-it-conveys-light-from-the-calibration-light-sources-and-the-integrating-sphere-to-the-fore-optics-focal-plane-where-the-ifus-are-located">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_optics.png" data-caption="(top) Spectrograph optics layout. It is composed of 16 spherical singlets (with five closely separated pairs) with seven calcium fluoride components. (bottom left) Fore-optics layout. Left side is from the telescope tertiary fold mirror. The fore-optics converts plate scale of the light from 1 arcsec/157micron to 0.8 arcsec/300micron (from F/9 to F/21.486). (bottom right) Calibration optics layout. The calibration optics shares the last two lenses with the fore-optics. It conveys light from the calibration light sources and the integrating sphere to the fore-optics focal plane where the IFUs are located.">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_optics.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+(top) Spectrograph optics layout. It is composed of 16 spherical singlets (with five closely separated pairs) with seven calcium fluoride components. (bottom left) Fore-optics layout. Left side is from the telescope tertiary fold mirror. The fore-optics converts plate scale of the light from 1 arcsec/157micron to 0.8 arcsec/300micron (from F/9 to F/21.486). (bottom right) Calibration optics layout. The calibration optics shares the last two lenses with the fore-optics. It conveys light from the calibration light sources and the integrating sphere to the fore-optics focal plane where the IFUs are located.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-expected-dotifs-spectrograph-throughput-along-with-the-total-instrument-throughput-average-throughput-of-the-instrument-is-260">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_throughput.png" data-caption="Expected DOTIFS spectrograph throughput along with the total instrument throughput. Average throughput of the instrument is 26.0%.">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_throughput.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Expected DOTIFS spectrograph throughput along with the total instrument throughput. Average throughput of the instrument is 26.0%.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-examples-of-simulated-dotifs-spectrograph-ccd-image">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_ccdsim.png" data-caption="Examples of simulated DOTIFS spectrograph CCD image">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_ccdsim.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Examples of simulated DOTIFS spectrograph CCD image
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-examples-of-dotifs-exposure-time-calculator-output-it-shows-all-the-input-parameters-along-with-the-input-spectrum-and-the-calculated-signal-to-noise-ratio-distribution">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_etc.png" data-caption="Examples of DOTIFS exposure time calculator output. It shows all the input parameters along with the input spectrum and the calculated signal to noise ratio distribution.">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_etc.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Examples of DOTIFS exposure time calculator output. It shows all the input parameters along with the input spectrum and the calculated signal to noise ratio distribution.
+&lt;/figcaption>
+&lt;/figure></description></item><item><title>IFS Data Deconvolution</title><link>https://astrohchung-test.netlify.app/project/ifsdeconv/</link><pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate><guid>https://astrohchung-test.netlify.app/project/ifsdeconv/</guid><description>&lt;p>Abstract:
+We perform a PSF deconvolution on the SDSS-IV MaNGA integral field unit (IFU) data to mitigate beam-smearing and atmospheric seeing effect. We use wavelength-dependent PSF size information to perform the deconvolution. We test the PSF deconvolution method to the mock IFU data and show that the deconvolved IFS data by this method can reasonably well recover correct kinematic parameters. Deconvolution performance is depending on radial coverage and S/N distribution of an IFS data. The method can be applied to other type of IFU data as well.&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>Manuscript work in progress. Will be submitted to refereed Journal by July 2020&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Example Python3 code can be found at &lt;a href="https://github.com/astrohchung/deconv">https://github.com/astrohchung/deconv&lt;/a>&lt;/strong>&lt;/p>
+&lt;p>Light from the sky to a ground-based telescope always pass through the atmosphere, and turbulence of the atmosphere blurs light from a point source to the shape of a point spread function (PSF), which called as atmospheric seeing effect. This effect correlates spatial information of extended objects and limits a detailed spatially resolved study of the objects. There are ways to overcome this seeing effect using 1) space telescope, or 2) adaptive optics but, the resources are limited. Thus, most of ground-based telescopes are still being suffered by the seeing effect.&lt;/p>
+&lt;p>In the field of fiber-based integral field spectroscopy, the situation becomes worse due to the large sampling size of the fibers. In case of
+&lt;a href="https://www.sdss.org/surveys/manga/" target="_blank" rel="noopener">SDSS-IV MaNGA IFU survey data&lt;/a>
+&lt;a href="http://adsabs.harvard.edu/abs/2015ApJ...798....7B" target="_blank" rel="noopener">&lt;span style="color:blue">(Bundy et al. 2015)&lt;/span>&lt;/a>, the fiber sampling size causes undersampling of the astronomical targets and produces effective PSF full width at half maximum (FWHM) with about 2.5&amp;rdquo;. This is larger than typical atmospheric seeing size (1.5&amp;rdquo;)
+&lt;a href="https://www.sdss.org/dr14/manga/manga-survey-strategy/" target="_blank" rel="noopener">(ref)&lt;/a> at the Apache point observatory. Although MaNGA made a set of three dithered exposure to relieve the undersampling issue, the effect of seeing and beam-smearing remain in the reduced data. For example, in case of SDSS-IV MaNGA data, the direct comparison of &lt;i>gri&lt;/i> image from SDSS imaging camera and reconstructed &lt;i>gri&lt;/i> image from MaNGA IFU shows the difference in image quality due to sampling size. Here we call combined effect of seeing and beam-smearing as a PSF effect.&lt;/p>
+&lt;figure id="figure-left-igrii-image-from-sdss-image-camera-and-reconstructed-igrii-image-from-manga-data-cube-it-shows-significant-image-degradation-due-to-sampling-size-of-fiber-middle-square-grid-and-circles-in-hexagonal-arrangement-show-relative-sampling-size-between-sdss-image-camera-ccd-and-manga-fibers-part-of-manga-ifu-image-is-cut-out-from-figure-4-of-span-stylecolorbluebundy-et-al-2015spanhttpadsabsharvardeduabs2015apj7987b-right-conceptual-diagram-which-shows-how-a-psf-broadens-the-original-galaxy-shape">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/ifsdc_psf.png" data-caption="(left) &amp;lt;i&amp;gt;gri&amp;lt;/i&amp;gt; image from SDSS image camera and reconstructed &amp;lt;i&amp;gt;gri&amp;lt;/i&amp;gt; image from MaNGA data cube, It shows significant image degradation due to sampling size of fiber. (middle) Square grid and circles in hexagonal arrangement show relative sampling size between SDSS image camera CCD and MaNGA fibers. Part of MaNGA IFU image is cut out from figure 4 of &amp;lt;a href=&amp;#34;http://adsabs.harvard.edu/abs/2015ApJ...798....7B&amp;#34;&amp;gt;&amp;lt;span style=&amp;#39;color:blue&amp;#39;&amp;gt;Bundy et al. 2015&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt; (right) Conceptual diagram which shows how a PSF broadens the original galaxy shape.">
+&lt;img src="https://astrohchung-test.netlify.app/img/ifsdc_psf.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+(left) &lt;i>gri&lt;/i> image from SDSS image camera and reconstructed &lt;i>gri&lt;/i> image from MaNGA data cube, It shows significant image degradation due to sampling size of fiber. (middle) Square grid and circles in hexagonal arrangement show relative sampling size between SDSS image camera CCD and MaNGA fibers. Part of MaNGA IFU image is cut out from figure 4 of &lt;a href="http://adsabs.harvard.edu/abs/2015ApJ...798....7B">&lt;span style='color:blue'>Bundy et al. 2015&lt;/span>&lt;/a> (right) Conceptual diagram which shows how a PSF broadens the original galaxy shape.
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>There were many attempts to minimize impacts of the PSF effect on their scientific results. An approach is convolving a PSF on a model before comparing with observed data. Another approach is estimating an impact of seeing on the derived parameter by forward modeling. By using forward modeling, it is possible to find a relation between PSF size with a paticular measured parameter. (See
+&lt;a href="http://adsabs.harvard.edu/abs/2018MNRAS.477.4711G" target="_blank" rel="noopener">&lt;span style="color:blue">Graham et al. 2018&lt;/span>&lt;/a> for spin parameter measurement) However, the first approach requires PSF convolution on each model and the second approach requires forward modeling on each parameter, both demand a considerable computational power and time.&lt;/p>
+&lt;hr>
+&lt;p>We propose a new method to mitigate the PSF effect on IFU data using &lt;strong>PSF deconvolution&lt;/strong>. This method deconvolves the IFU data at each wavelength bin using gaussian shape PSF. It applies Richardson–Lucy algorithm
+&lt;a href="https://www.osapublishing.org/josa/abstract.cfm?uri=josa-62-1-55" target="_blank" rel="noopener">&lt;span style="color:blue">(Richardson 1972)&lt;/span>&lt;/a> and deconvolves the IFU data at each wavelength bin using a gaussian shape PSF. In case of MaNGA IFU data, FWHM of PSF at four bands (&lt;i>griz&lt;/i>) are used to define the gaussian shape PSF. FWHM values are provided along with an each IFU data from observation of stars with 12 mini-IFUs (7 fibers). By applying this method, we have found that PSF-deconvolved data shows noticable difference compared with PSF-convolved data.&lt;/p>
+&lt;figure id="figure-this-figure-shows-the-effect-of-psf-deconvolution-on-two-manga-galaxies-in-each-galaxy-images-in-the-left-column-show-reconstructed-manga-igrii-image-velocity-distribution-and-velocity-distribution-obtained-from-original-manga-data-images-in-the-right-column-are-the-same-of-those-in-the-left-column-but-from-psf-deconvolved-manga-data-the-igrii-image-becomes-sharpen-and-the-velocity-distribution-appears-difference-with-that-in-the-deconvolved-column-the-velocity-dispersion-distribution-shows-a-more-compact-central-region-in-the-deconvolved-case">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/ifsdc_ex.png" data-caption="This figure shows the effect of PSF deconvolution on two MaNGA galaxies. In each galaxy, images in the left column show reconstructed MaNGA &amp;lt;i&amp;gt;gri&amp;lt;/i&amp;gt; image, velocity distribution, and velocity distribution obtained from original MaNGA data. Images in the right column are the same of those in the left column but from PSF-deconvolved MaNGA data. The &amp;lt;i&amp;gt;gri&amp;lt;/i&amp;gt; image becomes sharpen and the velocity distribution appears difference with that in the deconvolved column. The velocity dispersion distribution shows a more compact central region in the deconvolved case.">
+&lt;img src="https://astrohchung-test.netlify.app/img/ifsdc_ex.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+This figure shows the effect of PSF deconvolution on two MaNGA galaxies. In each galaxy, images in the left column show reconstructed MaNGA &lt;i>gri&lt;/i> image, velocity distribution, and velocity distribution obtained from original MaNGA data. Images in the right column are the same of those in the left column but from PSF-deconvolved MaNGA data. The &lt;i>gri&lt;/i> image becomes sharpen and the velocity distribution appears difference with that in the deconvolved column. The velocity dispersion distribution shows a more compact central region in the deconvolved case.
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>We performed comprehensive tests to quantitatively check the effect of our method. &lt;strong>We construct a PSF-free mock of MaNGA IFU data&lt;/strong> using a set of geometrical parameter, light distribution, signal to noise ratio distribution, stellar kinematic model, and synthetic stellar population. From a set of PSF-free mock, we produce PSF-convolved mock data by convolving wavelength dependent gaussian PSF and adding Poisson noise. We apply our deconvolution method to the PSF-convolved mock data and generate PSF-deconvolved mock IFU data. We measure kinematic model parameters from three different kinds of mock IFU data (PSF-free, PSF-convolved, and PSF-deconvolved), and compare them with each other. The result shows that &lt;strong>the kinematics parameters measured from PSF-deconvolved mock IFU data is well-matched with those from PSF-free mock IFU data,&lt;/strong> while those from PSF-convolved mock data are not. &lt;strong>We conclude that the PSF deconvolution method is an efficient way to convert PSF-convolved data close to PSF-Free one.&lt;/strong> Outcome of this method can be used directly for comparison with a model or measurement of a certain parameter, without an additional process.&lt;/p>
+&lt;p>In order to demonstrate the validity of the deconvolution method quantitatively and estimate the limitation of this method, we are performing additional tests with the mock MaNGA IFU data. We are expected to apply this method for general data analysis of integral field spectroscopy. &lt;strong>The deconvolution code in Python3 will be publicly available soon through Github with a tutorial.&lt;/strong>&lt;/p>
+&lt;figure id="figure-top-each-column-shows-an-example-of-the-different-distribution-of-kinematic-parameters-generating-mock-manga-ifu-data-the-first-and-second-columns-imply-varying-kinematic-distribution-depending-on-r_1-and-1r_2-r_1-and-1r_2-are-rotation-curve-model-parameters-of-an-equation-on-this-figure-from-the-third-to-fifth-columns-these-are-varying-intensity-distribution-depends-on-sersic-index-effective-radius-and-inclination-angle-the-last-one-means-varying-sn-distribution-bottom-this-is-the-velocity-distribution-measured-from-three-different-kinds-of-mock-manga-ifu-data">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/ifsdc_md.png" data-caption="(top) Each column shows an example of the different distribution of kinematic parameters generating mock MaNGA IFU data. The first and second columns imply varying kinematic distribution depending on $r_1$ and $1/r_2$. $r_1$ and $1/r_2$ are rotation curve model parameters of an equation on this figure. From the third to fifth columns, these are varying intensity distribution, depends on Sersic index, effective radius, and inclination angle. The last one means varying S/N distribution. (bottom) This is the velocity distribution measured from three different kinds of mock MaNGA IFU data.">
+&lt;img src="https://astrohchung-test.netlify.app/img/ifsdc_md.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+(top) Each column shows an example of the different distribution of kinematic parameters generating mock MaNGA IFU data. The first and second columns imply varying kinematic distribution depending on $r_1$ and $1/r_2$. $r_1$ and $1/r_2$ are rotation curve model parameters of an equation on this figure. From the third to fifth columns, these are varying intensity distribution, depends on Sersic index, effective radius, and inclination angle. The last one means varying S/N distribution. (bottom) This is the velocity distribution measured from three different kinds of mock MaNGA IFU data.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-the-first-second-column-indicates-an-11-relation-of-measured-parameters-from-psf-convolved-psf-deconvolved-mock-data-with-those-from-psf-free-one-plotted-as-red-blue-dots-measured-parameters-from-psf-convolved-mock-cube-shows-noticeable-deviation-with-the-true-parameters-but-those-from-psf-deconvolved-mock-cube-shows-similar-with-the-those-from-psf-free-mock-cube-this-is-clearly-shown-as-histogram-in-the-third-column">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/ifsdc_cp.png" data-caption="The first (second) column indicates an 1:1 relation of measured parameters from PSF-convolved (PSF-deconvolved) mock data with those from PSF-free one plotted as red (blue) dots. Measured parameters from PSF-convolved mock cube shows noticeable deviation with the true parameters, but those from PSF-deconvolved mock cube shows similar with the those from PSF-Free mock cube. This is clearly shown as histogram in the third column.">
+&lt;img src="https://astrohchung-test.netlify.app/img/ifsdc_cp.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+The first (second) column indicates an 1:1 relation of measured parameters from PSF-convolved (PSF-deconvolved) mock data with those from PSF-free one plotted as red (blue) dots. Measured parameters from PSF-convolved mock cube shows noticeable deviation with the true parameters, but those from PSF-deconvolved mock cube shows similar with the those from PSF-Free mock cube. This is clearly shown as histogram in the third column.
+&lt;/figcaption>
+&lt;/figure></description></item><item><title>Rotation Curve of Nearby Galaxies</title><link>https://astrohchung-test.netlify.app/project/mangarc/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>https://astrohchung-test.netlify.app/project/mangarc/</guid><description>&lt;p>Abstract: We measure rotation curves of SDSS-IV MaNGA galaxies and study their dependence on mass and environmental parameters. We perform PSF deconvolution on the 3D Cube to overcome the atmospheric seeing and the beam-smearing effect. Using 2D stellar velocity maps measured from the deconvolved cubes, we fit a simple thin-disk rotation curve model (a hyperbolic tangent function with a linear term) to obtain model parameters and kinematic geometry of the galaxies. The PSF deconvolution is crucial to study the detail of the rotation curve. We notice that galaxies with disk show clear rigid body rotation around the center and flat rotation at their outskirts, but also show inclined rotation curve (decreasing/increasing) at their outskirts as well, depending on galaxy morphology (Early/Late). Rotation curve model parameters (rotation velocity amplitude, inner specific radius, and outskirt curve slope) are correlated with mass, for both early and late-type galaxies. For low mass (log(M_star/M_sun) &amp;lt; 10) late-type galaxies, their rotation curve slope at the outskirt have a positive correlation when the large-scale (background mass density from 20 nearest galaxies) or the small scale (projected distance to the nearest neighbor galaxies) environmental parameters are larger than the mean cosmic mass density or smaller than one virial radius of the nearest neighbor galaxy. These results suggest that both the large and small scale environmental parameters play a considerable effect on stellar kinematics.&lt;/p>
+&lt;hr>
+&lt;h2 id="data">Data&lt;/h2>
+&lt;p>We use
+&lt;a href="https://www.sdss.org/surveys/manga/" target="_blank" rel="noopener">SDSS-IV MaNGA MPL-6 data&lt;/a>
+&lt;a href="http://adsabs.harvard.edu/abs/2015ApJ...798....7B" target="_blank" rel="noopener">&lt;span style="color:blue">(Bundy et al. 2015)&lt;/span>&lt;/a> (equivalent to DR15), which includes 3D cube data from 4,601 galaxies.. We utilize Sersic index, ellipticity, and elliptical Petrosian radius, redshift, and stellar mass from
+&lt;a href="https://www.sdss.org/dr13/manga/manga-target-selection/nsa/" target="_blank" rel="noopener">NASA Sloan Atlas&lt;/a> as well as morphology infromation of 4,419 galaxies from
+&lt;a href="https://astro.kias.re.kr/vagc/dr7/" target="_blank" rel="noopener">KIAS value-added galaxy catalog&lt;/a>
+&lt;a href="https://ui.adsabs.harvard.edu/#abs/2010JKAS...43..191C/abstract" target="_blank" rel="noopener">&lt;span style="color:blue">(Choi et al. 2010)&lt;/span>&lt;/a>.&lt;/p>
+&lt;h2 id="methods">Methods&lt;/h2>
+&lt;ul>
+&lt;li>PSF Deconvolution &amp;amp; Velocity Measurement&lt;br>
+We perform
+&lt;a href="https://astrohchung.github.io/project/ifsdeconv/" target="_blank" rel="noopener">PSF deconvolution&lt;/a> on all MaNGA MPL-6 data, and measure line of sight velocity distribution by
+&lt;a href="http://www-astro.physics.ox.ac.uk/~mxc/software/#ppxf" target="_blank" rel="noopener">pPXF&lt;/a>, using Miles stellar population synthesis models. We fit the 2D rotation curve model (hyperbolic tangent + linear function) on the 2D obtained velocity maps and obtain model parameters as below.&lt;/li>
+&lt;/ul>
+&lt;figure id="figure-rotation-of-the-disk-galaxy-can-be-captured-only-when-they-are-inclined-previously-its-2d-velocity-distribution-shape-was-described-by-three-functions-which-are-mentioned-in-the-figure-by-adding-one-linear-term-on-the-previous-model-we-can-fit-the-slope-of-the-galaxy-rotation-curve-at-its-outskirts">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/rc_vel2dfit.png" data-caption="Rotation of the disk galaxy can be captured only when they are inclined. Previously, its 2D velocity distribution shape was described by three functions which are mentioned in the figure. By adding one linear term on the previous model, we can fit the slope of the galaxy rotation curve at its outskirts.">
+&lt;img src="https://astrohchung-test.netlify.app/img/rc_vel2dfit.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Rotation of the disk galaxy can be captured only when they are inclined. Previously, its 2D velocity distribution shape was described by three functions which are mentioned in the figure. By adding one linear term on the previous model, we can fit the slope of the galaxy rotation curve at its outskirts.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-here-we-show-examples-of-our-2d-velocity-model-fitting-left-2d-model-velocity-map-which-from-best-fit-2d-rotation-curve-model-right-the-rotation-curve-of-example-manga-galaxies-the-green-line-indicates-rotation-curve-from-the-fitted-model">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/rc_ex.png" data-caption="Here we show examples of our 2D velocity model fitting. (left) 2D model velocity map which from best-fit 2D rotation curve model. (right) The rotation curve of example MaNGA galaxies. The green line indicates rotation curve from the fitted model.">
+&lt;img src="https://astrohchung-test.netlify.app/img/rc_ex.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Here we show examples of our 2D velocity model fitting. (left) 2D model velocity map which from best-fit 2D rotation curve model. (right) The rotation curve of example MaNGA galaxies. The green line indicates rotation curve from the fitted model.
+&lt;/figcaption>
+&lt;/figure>
+&lt;ul>
+&lt;li>
+&lt;p>Large-scale environmental parameter, $\rho_{20}$
+&lt;a href="https://ui.adsabs.harvard.edu/#abs/2008ApJ...674..784P/abstract" target="_blank" rel="noopener">(Park et al. 2008)&lt;/a>&lt;br>
+Background mass density using the (3D) closest 20 galaxies (several Mpc scale), normalized by mean mass density&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Small-scale environmental parameter, $R_{n}$
+&lt;a href="https://ui.adsabs.harvard.edu/#abs/2009ApJ...691.1828P/abstract" target="_blank" rel="noopener">(Park et al. 2009)&lt;/a>&lt;br>
+Distance to the nearest neighbor in a unit of the neighbor&amp;rsquo;s virial radius&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="results">Results&lt;/h2>
+&lt;p>Below results are from MaNGA late-type galaxies with $R_{major}$/$R_1$ &amp;gt; 3
+&lt;figure id="figure--1r_2-over-smalllarge-scale-environ-parameter-versus-galaxy-mass-leftright-there-is-clear-1r_2-dependence-on-galaxy-mass-as-well-as-a-weak-correlation-with-largesmall-scale-environmental-parameters">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/rc_mr_ls.png" data-caption="↑ $1/R_2$ over small/large scale environ. parameter versus galaxy mass (left/right). There is clear $1/R_2$ dependence on galaxy mass, as well as a weak correlation with large/small scale environmental parameters">
+&lt;img src="https://astrohchung-test.netlify.app/img/rc_mr_ls.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+↑ $1/R_2$ over small/large scale environ. parameter versus galaxy mass (left/right). There is clear $1/R_2$ dependence on galaxy mass, as well as a weak correlation with large/small scale environmental parameters
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;figure id="figure--1r_2-over-small-scale-environ-parameter-versus-galaxy-mass-depending-on-neighbor-galaxy-morphology-left-early-neighbor-right-late-neighbor-there-is-steeper-change-on-1r_2-around-r_nr_n1-when-the-neighbor-is-late-type-">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/rc_mr_nb.png" data-caption="↑ $1/R_2$ over small scale environ. parameter versus galaxy mass, depending on neighbor galaxy morphology. Left: early neighbor, right: late neighbor. There is steeper change on $1/R_2$ around $R_n/r_n=1$ when the neighbor is late type.">
+&lt;img src="https://astrohchung-test.netlify.app/img/rc_mr_nb.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+↑ $1/R_2$ over small scale environ. parameter versus galaxy mass, depending on neighbor galaxy morphology. Left: early neighbor, right: late neighbor. There is steeper change on $1/R_2$ around $R_n/r_n=1$ when the neighbor is late type.
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;ul>
+&lt;li>We deconvolved MaNGA 3D cube data to mitigate the effect of large PSF size.&lt;/li>
+&lt;li>The deconvolution procedure is crucial to recovering true RC model parameters.&lt;/li>
+&lt;li>MaNGA rotation curve is parametrized by a fitting model function.&lt;/li>
+&lt;li>Rotation curve slope at galaxy outskirts radius shows correlation with large/small scale environment parameter at fixed stellar mass, especially when R_n/r_vri,n&amp;lt;1 and $\rho$_20/&amp;lt;ρ&amp;gt; &amp;gt;1.&lt;/li>
+&lt;/ul></description></item><item><title>Stellar Population Analysis</title><link>https://astrohchung-test.netlify.app/project/stpop/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>https://astrohchung-test.netlify.app/project/stpop/</guid><description>&lt;p>I use the data analysis code
+&lt;a href="http://www.starlight.ufsc.br/" target="_blank" rel="noopener">&amp;ldquo;STARLIGHT&amp;rdquo;&lt;/a> to study stellar population of the galaxies.&lt;/p>
+&lt;hr>
+&lt;p>List of publications&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>
+&lt;a href="http://adsabs.harvard.edu/abs/2017ApJ...845...93K" target="_blank" rel="noopener">Star Formation Activity of Barred Spiral Galaxies,&lt;/a>&lt;br>
+Kim, E., Hwang, H. S., &lt;strong>Chung, H.,&lt;/strong> Lee, G.H., Park, C., Cervantes Sodi, B., Kim, S. S., 2017,
+ApJ, 845, 83&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="http://adsabs.harvard.edu/abs/2016ApJ...820..132K" target="_blank" rel="noopener">Stellar Populations of Early-type Galaxies with Mid-infrared Excess Emission,&lt;/a>&lt;br>
+Ko, J., &lt;strong>Chung, H.,&lt;/strong> Hwang, H. S., Lee, J. C., 2016, ApJ, 820, 132&lt;/p>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>

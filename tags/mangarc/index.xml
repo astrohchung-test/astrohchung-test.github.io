@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mangarc | Haeun Chung</title><link>https://astrohchung-test.netlify.app/tags/mangarc/</link><atom:link href="https://astrohchung-test.netlify.app/tags/mangarc/index.xml" rel="self" type="application/rss+xml"/><description>mangarc</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Haeun Chung</copyright><lastBuildDate>Sat, 06 Oct 2018 00:00:00 +0000</lastBuildDate><image><url>https://astrohchung-test.netlify.app/images/icon_hu05798da5833095988f190093553a38f3_1610_512x512_fill_lanczos_center_2.png</url><title>mangarc</title><link>https://astrohchung-test.netlify.app/tags/mangarc/</link></image><item><title>Rotation Curve of Nearby Galaxies</title><link>https://astrohchung-test.netlify.app/project/mangarc/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>https://astrohchung-test.netlify.app/project/mangarc/</guid><description>&lt;p>Abstract: We measure rotation curves of SDSS-IV MaNGA galaxies and study their dependence on mass and environmental parameters. We perform PSF deconvolution on the 3D Cube to overcome the atmospheric seeing and the beam-smearing effect. Using 2D stellar velocity maps measured from the deconvolved cubes, we fit a simple thin-disk rotation curve model (a hyperbolic tangent function with a linear term) to obtain model parameters and kinematic geometry of the galaxies. The PSF deconvolution is crucial to study the detail of the rotation curve. We notice that galaxies with disk show clear rigid body rotation around the center and flat rotation at their outskirts, but also show inclined rotation curve (decreasing/increasing) at their outskirts as well, depending on galaxy morphology (Early/Late). Rotation curve model parameters (rotation velocity amplitude, inner specific radius, and outskirt curve slope) are correlated with mass, for both early and late-type galaxies. For low mass (log(M_star/M_sun) &amp;lt; 10) late-type galaxies, their rotation curve slope at the outskirt have a positive correlation when the large-scale (background mass density from 20 nearest galaxies) or the small scale (projected distance to the nearest neighbor galaxies) environmental parameters are larger than the mean cosmic mass density or smaller than one virial radius of the nearest neighbor galaxy. These results suggest that both the large and small scale environmental parameters play a considerable effect on stellar kinematics.&lt;/p>
+&lt;hr>
+&lt;h2 id="data">Data&lt;/h2>
+&lt;p>We use
+&lt;a href="https://www.sdss.org/surveys/manga/" target="_blank" rel="noopener">SDSS-IV MaNGA MPL-6 data&lt;/a>
+&lt;a href="http://adsabs.harvard.edu/abs/2015ApJ...798....7B" target="_blank" rel="noopener">&lt;span style="color:blue">(Bundy et al. 2015)&lt;/span>&lt;/a> (equivalent to DR15), which includes 3D cube data from 4,601 galaxies.. We utilize Sersic index, ellipticity, and elliptical Petrosian radius, redshift, and stellar mass from
+&lt;a href="https://www.sdss.org/dr13/manga/manga-target-selection/nsa/" target="_blank" rel="noopener">NASA Sloan Atlas&lt;/a> as well as morphology infromation of 4,419 galaxies from
+&lt;a href="https://astro.kias.re.kr/vagc/dr7/" target="_blank" rel="noopener">KIAS value-added galaxy catalog&lt;/a>
+&lt;a href="https://ui.adsabs.harvard.edu/#abs/2010JKAS...43..191C/abstract" target="_blank" rel="noopener">&lt;span style="color:blue">(Choi et al. 2010)&lt;/span>&lt;/a>.&lt;/p>
+&lt;h2 id="methods">Methods&lt;/h2>
+&lt;ul>
+&lt;li>PSF Deconvolution &amp;amp; Velocity Measurement&lt;br>
+We perform
+&lt;a href="https://astrohchung.github.io/project/ifsdeconv/" target="_blank" rel="noopener">PSF deconvolution&lt;/a> on all MaNGA MPL-6 data, and measure line of sight velocity distribution by
+&lt;a href="http://www-astro.physics.ox.ac.uk/~mxc/software/#ppxf" target="_blank" rel="noopener">pPXF&lt;/a>, using Miles stellar population synthesis models. We fit the 2D rotation curve model (hyperbolic tangent + linear function) on the 2D obtained velocity maps and obtain model parameters as below.&lt;/li>
+&lt;/ul>
+&lt;figure id="figure-rotation-of-the-disk-galaxy-can-be-captured-only-when-they-are-inclined-previously-its-2d-velocity-distribution-shape-was-described-by-three-functions-which-are-mentioned-in-the-figure-by-adding-one-linear-term-on-the-previous-model-we-can-fit-the-slope-of-the-galaxy-rotation-curve-at-its-outskirts">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/rc_vel2dfit.png" data-caption="Rotation of the disk galaxy can be captured only when they are inclined. Previously, its 2D velocity distribution shape was described by three functions which are mentioned in the figure. By adding one linear term on the previous model, we can fit the slope of the galaxy rotation curve at its outskirts.">
+&lt;img src="https://astrohchung-test.netlify.app/img/rc_vel2dfit.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Rotation of the disk galaxy can be captured only when they are inclined. Previously, its 2D velocity distribution shape was described by three functions which are mentioned in the figure. By adding one linear term on the previous model, we can fit the slope of the galaxy rotation curve at its outskirts.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-here-we-show-examples-of-our-2d-velocity-model-fitting-left-2d-model-velocity-map-which-from-best-fit-2d-rotation-curve-model-right-the-rotation-curve-of-example-manga-galaxies-the-green-line-indicates-rotation-curve-from-the-fitted-model">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/rc_ex.png" data-caption="Here we show examples of our 2D velocity model fitting. (left) 2D model velocity map which from best-fit 2D rotation curve model. (right) The rotation curve of example MaNGA galaxies. The green line indicates rotation curve from the fitted model.">
+&lt;img src="https://astrohchung-test.netlify.app/img/rc_ex.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Here we show examples of our 2D velocity model fitting. (left) 2D model velocity map which from best-fit 2D rotation curve model. (right) The rotation curve of example MaNGA galaxies. The green line indicates rotation curve from the fitted model.
+&lt;/figcaption>
+&lt;/figure>
+&lt;ul>
+&lt;li>
+&lt;p>Large-scale environmental parameter, $\rho_{20}$
+&lt;a href="https://ui.adsabs.harvard.edu/#abs/2008ApJ...674..784P/abstract" target="_blank" rel="noopener">(Park et al. 2008)&lt;/a>&lt;br>
+Background mass density using the (3D) closest 20 galaxies (several Mpc scale), normalized by mean mass density&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Small-scale environmental parameter, $R_{n}$
+&lt;a href="https://ui.adsabs.harvard.edu/#abs/2009ApJ...691.1828P/abstract" target="_blank" rel="noopener">(Park et al. 2009)&lt;/a>&lt;br>
+Distance to the nearest neighbor in a unit of the neighbor&amp;rsquo;s virial radius&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="results">Results&lt;/h2>
+&lt;p>Below results are from MaNGA late-type galaxies with $R_{major}$/$R_1$ &amp;gt; 3
+&lt;figure id="figure--1r_2-over-smalllarge-scale-environ-parameter-versus-galaxy-mass-leftright-there-is-clear-1r_2-dependence-on-galaxy-mass-as-well-as-a-weak-correlation-with-largesmall-scale-environmental-parameters">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/rc_mr_ls.png" data-caption="↑ $1/R_2$ over small/large scale environ. parameter versus galaxy mass (left/right). There is clear $1/R_2$ dependence on galaxy mass, as well as a weak correlation with large/small scale environmental parameters">
+&lt;img src="https://astrohchung-test.netlify.app/img/rc_mr_ls.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+↑ $1/R_2$ over small/large scale environ. parameter versus galaxy mass (left/right). There is clear $1/R_2$ dependence on galaxy mass, as well as a weak correlation with large/small scale environmental parameters
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;figure id="figure--1r_2-over-small-scale-environ-parameter-versus-galaxy-mass-depending-on-neighbor-galaxy-morphology-left-early-neighbor-right-late-neighbor-there-is-steeper-change-on-1r_2-around-r_nr_n1-when-the-neighbor-is-late-type-">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/rc_mr_nb.png" data-caption="↑ $1/R_2$ over small scale environ. parameter versus galaxy mass, depending on neighbor galaxy morphology. Left: early neighbor, right: late neighbor. There is steeper change on $1/R_2$ around $R_n/r_n=1$ when the neighbor is late type.">
+&lt;img src="https://astrohchung-test.netlify.app/img/rc_mr_nb.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+↑ $1/R_2$ over small scale environ. parameter versus galaxy mass, depending on neighbor galaxy morphology. Left: early neighbor, right: late neighbor. There is steeper change on $1/R_2$ around $R_n/r_n=1$ when the neighbor is late type.
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;ul>
+&lt;li>We deconvolved MaNGA 3D cube data to mitigate the effect of large PSF size.&lt;/li>
+&lt;li>The deconvolution procedure is crucial to recovering true RC model parameters.&lt;/li>
+&lt;li>MaNGA rotation curve is parametrized by a fitting model function.&lt;/li>
+&lt;li>Rotation curve slope at galaxy outskirts radius shows correlation with large/small scale environment parameter at fixed stellar mass, especially when R_n/r_vri,n&amp;lt;1 and $\rho$_20/&amp;lt;ρ&amp;gt; &amp;gt;1.&lt;/li>
+&lt;/ul></description></item></channel></rss>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dotifs | Haeun Chung</title><link>https://astrohchung-test.netlify.app/tags/dotifs/</link><atom:link href="https://astrohchung-test.netlify.app/tags/dotifs/index.xml" rel="self" type="application/rss+xml"/><description>dotifs</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Haeun Chung</copyright><lastBuildDate>Fri, 19 Oct 2018 00:00:00 +0000</lastBuildDate><image><url>https://astrohchung-test.netlify.app/images/icon_hu05798da5833095988f190093553a38f3_1610_512x512_fill_lanczos_center_2.png</url><title>dotifs</title><link>https://astrohchung-test.netlify.app/tags/dotifs/</link></image><item><title>Devasthal Optical Telescope Integral Field Spectrograph (DOTIFS)</title><link>https://astrohchung-test.netlify.app/project/dotifs/</link><pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate><guid>https://astrohchung-test.netlify.app/project/dotifs/</guid><description>&lt;p>Devasthal Optical Telescope Integral Field Spectrograph (DOTIFS), (
+&lt;a href="http://adsabs.harvard.edu/abs/2014SPIE.9147E..0VC" target="_blank" rel="noopener">&lt;span style="color:blue">Chung et al. 2014&lt;/span>&lt;/a>) is a new &lt;strong>multi-Integral Field Unit (multi-IFU)&lt;/strong> instrument planned to be mounted on the 3.6m Devasthal optical telescope (
+&lt;a href="http://adsabs.harvard.edu/abs/2012SPIE.8444E..1TS" target="_blank" rel="noopener">&lt;span style="color:blue">Sagar et al. 2012&lt;/span>&lt;/a>)(
+&lt;a href="https://www.aries.res.in/dot/index.html" target="_blank" rel="noopener">link 1&lt;/a>,
+&lt;a href="https://www.aries.res.in/projects/" target="_blank" rel="noopener">link 2&lt;/a>) in Nainital, India. DOTIFS has &lt;strong>16 deployable IFUs&lt;/strong> covering an &lt;strong>8 arcminute&lt;/strong> diameter field of view. Each IFU covers &lt;strong>8.7 arcsec x 7.4 arcsec&lt;/strong> on the sky, and is composed of a 12 x 12 array of hexagonal shape microlenses each of which is &lt;strong>0.8 arcsec&lt;/strong> vertex to vertex. Use of microlens array allows ~99% fill factor. Optical fibers are attached at the back side of each microlens to gather and transfer light to the spectrographs. The fibers form a pseudoslit at the entrance of spectrograph. Dispersion is achieved using fixed Volume Phase Holographic (VPH) grating. Wavelength coverage is &lt;strong>370-740nm&lt;/strong>, and the spectral resolution is &lt;strong>1200 – 2400&lt;/strong> over the wavelength range. DOTIFS have eight identical spectrographs to cover 2,304 fibers, with 288 fibers (from two IFUs) per spectrograph.&lt;/p>
+&lt;p>The
+&lt;a href="https://instru.iucaa.in/" target="_blank" rel="noopener">instrumentation group&lt;/a> at the Inter-University Center for Astronomy and Astrophysics (Pune, India) is leading this project. Aryabhatta Research Institute of Observational Sciences (Nainital, India) is operating the Devasthal telescope, and Korea Institute for Advanced Study and Seoul National University (Seoul, Korea) are participating as international collaborators. The scientific goals are focused on nearby galaxies, which are the primary targets of the instrument. This includes rotation curves of nearby galaxies, galactic HII regions, and merging/interacting galaxies.&lt;/p>
+&lt;p>We are developing the instrument with 4 IFUs and 2 spectrographs in the first stage. After the initial commissioning on the telescope, we will add 12 IFUs and 6 spectrographs to complete the instrument in the second stage. Currently, DOTIFS is in the assembly, integration and testing phase of its first stage. We expect to commission the instrument in the middle of 2019.&lt;/p>
+&lt;hr>
+&lt;p>I joined this project when I entered the graduate school in Fall 2012, when there was only one science requirement document about this project. Since then I learned about astronomical instrumentation both the general picture of the development and the specific details. As a member of DOTIFS team, I mainly contributed to the overall conceptual design, optical design, and software development. I describe details of my contribution as below.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Overall conceptual design&lt;br>
+I have performed &lt;strong>a conceptual design study&lt;/strong> of the instrument in the early stage of the project. I proposed feasible design which fulfills all the demands from science requirements.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Optical design&lt;br>
+I have designed &lt;strong>the optical systems&lt;/strong> in the instrument (Spectrograph collimator and camera, fore-optics, and calibration optics). I am using &lt;strong>ZEMAX&lt;/strong> to optimize the optical layouts from an existing design or scratch to meet the requirements. I performed &lt;strong>tolerance analysis&lt;/strong> and &lt;strong>thermal analysis&lt;/strong> with ZEMAX and suggested a solution to mitigate the impact of temperature variation to the optical performance.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Software&lt;br>
+I have developed a &lt;strong>spectrograph CCD image simulator&lt;/strong> (in C/C++ and IDL) and an &lt;strong>exposure time calculator (ETC)&lt;/strong> (in IDL and Python3). The spectrograph CCD image simulator utilizes information of varying PSF shape on the image plane from ZEMAX, and throughput of intermediate components between a target and CCD. It generates simulated CCD image in the unit of the electron. Currently, I am developing a &lt;strong>data reduction pipeline&lt;/strong> (in Python3) using the output of the CCD image simulator. The exposure time calculator calculates expected S/N ratio of the spectrum from a given target.
+&lt;a href="https://github.com/astrohchung/dotifsetc" target="_blank" rel="noopener">Command line version DOTIFS ETC in Python3&lt;/a> is available through Github. The web version of DOTIFS ETC will be developed shortly using a Python web framework such as
+&lt;a href="http://flask.pocoo.org/" target="_blank" rel="noopener">flask&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>In addition to the above contributions, I am &lt;strong>organizing the regular development telecon&lt;/strong> and circulating the minutes weekly. During a telecon, each member updates the current progress of the development on every subpart of the instrument, and discuss issues and suggest a solution. I also &lt;strong>have performed various laboratory testing on parts&lt;/strong>, and &lt;strong>produced necessary documents&lt;/strong> for the project. I will visit IUCAA this year (2018) and be involved in an instrument assembly, integration and test.&lt;/p>
+&lt;hr>
+&lt;p>List of DOTIFS publications (6 conference proceedings, 1 refereed journal)&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>
+&lt;a href="https://doi.org/10.1117/1.JATIS.4.3.036002" target="_blank" rel="noopener">Noise characterization of IUCAA digital sampling array controller,&lt;/a>&lt;br>
+Chattopadhyay, S., Ramaprakash, A. N., Joshi, B., Chordia, P. A., Burse, M. P., Chillal, K., Sinha, S., Punnadi, S. P., Rikame, K., Hong, S. E., Paranjpye, D., &lt;strong>Chung, H.,&lt;/strong> Park. C., Omar, A., 2018, JATIS, 4, 036002&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://doi.org/10.1117/12.2313798" target="_blank" rel="noopener">Multiple rooks of chess: a generic integral field unit deployment technique,&lt;/a>&lt;br>
+Chattopadhyay, S., Ramaprakash, A. N., Khodade, P., Chakravarti, K., Shaikh, S., &lt;strong>Chung, H.,&lt;/strong> Hong, S. E., 2018, Proc. SPIE, 10706, 107065S&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://doi.org/10.1117/12.2313729" target="_blank" rel="noopener">A new photolithography based technique to mass produce microlens+fibre based integral field units (IFUs) for 2D spectroscopy,&lt;/a>&lt;br>
+Chattopadhyay, S., Joshi, V., Ramaprakash, A. N., Modi, D., Kohak, A., &lt;strong>Chung, H.,&lt;/strong> 2018, Proc. SPIE, 10706, 107062D&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://arxiv.org/abs/1810.03627" target="_blank" rel="noopener">DOTIFS: fore-optics and calibration unit design,&lt;/a>&lt;br>
+&lt;strong>Chung, H.,&lt;/strong> Ramaprakash, A. N., Khodade, P., Rajarshi, C. V., Chattopadhyay, S., Chordia, P. A., Omar, A., Park, C., 2018 Proc. SPIE, 10702, 107027U
+&lt;a href="https://astrohchung-test.netlify.app/files/DOTIFS_fcal.pdf">(see poster)&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://arxiv.org/abs/1810.03621" target="_blank" rel="noopener">DOTIFS: spectrograph optical and opto-mechanical design,&lt;/a>&lt;br>
+&lt;strong>Chung, H.,&lt;/strong> Ramaprakash, A. N., Khodade, P., Modi, D., Rajarshi, C. V., Chattopadhyay, S., Chordia, P. A., Joshi, V., Hong, S. E., Omar. A., Ravindranath. S., Park, Y. S., Park, C., 2018 Proc. SPIE, 10702, 107027A
+&lt;a href="https://astrohchung-test.netlify.app/files/DOTIFS_spec.pdf">(see poster)&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://doi.org/10.5303/PKAS.2015.30.2.675" target="_blank" rel="noopener">Development Status of the Dotifs Data Simulator and the Reduction Package,&lt;/a>&lt;br>
+&lt;strong>Chung, H.,&lt;/strong> Ramaprakash, A. N., Park, C. 2015, PKAS, 30, 675&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://arxiv.org/abs/1810.03614" target="_blank" rel="noopener">DOTIFS: a new multi-IFU optical spectrograph for the 3.6-m Devasthal optical telescope,&lt;/a>&lt;br>
+&lt;strong>Chung, H.,&lt;/strong> Ramaprakash, A. N., Omar, A., Ravindranath, S., Chattopadhyay, S., Rajarshi, C. V., Khodade, P. 2014 Proc. SPIE, 9147, 91470V&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;figure id="figure-left-outside-view-of-the-36m-devasthal-optical-telescope-right-inside-view-of-the-telescope">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_telescope.png" data-caption="(left) Outside view of the 3.6m Devasthal Optical Telescope. (right) Inside view of the telescope.">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_telescope.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+(left) Outside view of the 3.6m Devasthal Optical Telescope. (right) Inside view of the telescope.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-top-spectrograph-optics-layout-it-is-composed-of-16-spherical-singlets-with-five-closely-separated-pairs-with-seven-calcium-fluoride-components-bottom-left-fore-optics-layout-left-side-is-from-the-telescope-tertiary-fold-mirror-the-fore-optics-converts-plate-scale-of-the-light-from-1-arcsec157micron-to-08-arcsec300micron-from-f9-to-f21486-bottom-right-calibration-optics-layout-the-calibration-optics-shares-the-last-two-lenses-with-the-fore-optics-it-conveys-light-from-the-calibration-light-sources-and-the-integrating-sphere-to-the-fore-optics-focal-plane-where-the-ifus-are-located">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_optics.png" data-caption="(top) Spectrograph optics layout. It is composed of 16 spherical singlets (with five closely separated pairs) with seven calcium fluoride components. (bottom left) Fore-optics layout. Left side is from the telescope tertiary fold mirror. The fore-optics converts plate scale of the light from 1 arcsec/157micron to 0.8 arcsec/300micron (from F/9 to F/21.486). (bottom right) Calibration optics layout. The calibration optics shares the last two lenses with the fore-optics. It conveys light from the calibration light sources and the integrating sphere to the fore-optics focal plane where the IFUs are located.">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_optics.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+(top) Spectrograph optics layout. It is composed of 16 spherical singlets (with five closely separated pairs) with seven calcium fluoride components. (bottom left) Fore-optics layout. Left side is from the telescope tertiary fold mirror. The fore-optics converts plate scale of the light from 1 arcsec/157micron to 0.8 arcsec/300micron (from F/9 to F/21.486). (bottom right) Calibration optics layout. The calibration optics shares the last two lenses with the fore-optics. It conveys light from the calibration light sources and the integrating sphere to the fore-optics focal plane where the IFUs are located.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-expected-dotifs-spectrograph-throughput-along-with-the-total-instrument-throughput-average-throughput-of-the-instrument-is-260">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_throughput.png" data-caption="Expected DOTIFS spectrograph throughput along with the total instrument throughput. Average throughput of the instrument is 26.0%.">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_throughput.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Expected DOTIFS spectrograph throughput along with the total instrument throughput. Average throughput of the instrument is 26.0%.
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-examples-of-simulated-dotifs-spectrograph-ccd-image">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_ccdsim.png" data-caption="Examples of simulated DOTIFS spectrograph CCD image">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_ccdsim.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Examples of simulated DOTIFS spectrograph CCD image
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure id="figure-examples-of-dotifs-exposure-time-calculator-output-it-shows-all-the-input-parameters-along-with-the-input-spectrum-and-the-calculated-signal-to-noise-ratio-distribution">
+&lt;a data-fancybox="" href="https://astrohchung-test.netlify.app/img/dotifs_etc.png" data-caption="Examples of DOTIFS exposure time calculator output. It shows all the input parameters along with the input spectrum and the calculated signal to noise ratio distribution.">
+&lt;img src="https://astrohchung-test.netlify.app/img/dotifs_etc.png" alt="" >
+&lt;/a>
+&lt;figcaption>
+Examples of DOTIFS exposure time calculator output. It shows all the input parameters along with the input spectrum and the calculated signal to noise ratio distribution.
+&lt;/figcaption>
+&lt;/figure></description></item></channel></rss>
